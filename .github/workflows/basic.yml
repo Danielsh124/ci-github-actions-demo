@@ -1,0 +1,16 @@
+name: Basic GitHub Actions Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v3
+
+      - name: Run Greeting Command
+        run: echo "Hello, CI with GitHub Actions!"
